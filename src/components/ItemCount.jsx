@@ -1,7 +1,8 @@
 import { useState } from 'react';
 
 const ItemCount = (props) => {
-    const [count, setCount] = useState(props.initial);
+    const initial = parseInt(props.initial);
+    const [count, setCount] = useState(initial);
     var stock = props.stock;
 
     const subCount = () => {
