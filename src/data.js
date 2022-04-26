@@ -26,5 +26,5 @@ export const productsList = [
         price: 200,
         imageURL: 'https://essential.vteximg.com.br/arquivos/ids/216189-1000-1000/431-0025_1.jpg?v=636840243552100000',
         stock: 15,
-    },
+    }
 ];
