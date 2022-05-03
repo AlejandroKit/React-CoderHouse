@@ -25,21 +25,18 @@ const ItemList = () => {
     }, []);
 
     return (
-        <div className='flex justify-center'>
-            {products.length ?( 
+        <div className="flex justify-center">
+            {products.length ? (
                 products.map((product) => {
-                    return <div key={product.id}>
-                        <Item 
-                        id={product.id} 
-                        name={product.name} 
-                        price={product.price} 
-                        imageURL={product.imageURL} 
-                        stock={product.stock} />
-                    </div>
+                    return (
+                        <div key={product.id}>
+                            <Item id={product.id} name={product.name} price={product.price} imageURL={product.imageURL} stock={product.stock} />
+                        </div>
+                    );
                 })
             ) : (
-                <h2 className='text-5xl'>Estamos trayendo los productos de la fabrica...</h2>
-            ) }
+                <h2 className="text-5xl">Estamos trayendo los productos de la fabrica...</h2>
+            )}
         </div>
     );
 };
