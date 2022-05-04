@@ -1,5 +1,3 @@
-import './style/itemDetail.css';
-
 const ItemDetail = (props) => {
     return (
         <>

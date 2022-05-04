@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import CartWidget from './CartWidget';
 import LinkList from './LinkList';
 
@@ -5,7 +6,10 @@ const NavBar = () => {
     return (
         <div className="navbar bg-base-100">
             <div className="flex-1">
-                <a className="btn btn-ghost normal-case text-xl">Str€€t-W€aring</a>
+                {/* <a className="btn btn-ghost normal-case text-xl">Str€€t-W€aring</a> */}
+                <Link to={'/'} className="btn btn-ghost normal-case text-xl">
+                    Str€€t-W€aring
+                </Link>
             </div>
             <div className="flex-none">
                 <LinkList />

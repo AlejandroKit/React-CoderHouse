@@ -1,17 +1,25 @@
 import ItemDetail from './ItemDetail';
 import { productsList } from '../data';
 import { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
 
 const ItemDetailContainer = () => {
     const [items, setItem] = useState([]);
+    const { itemId } = useParams();
+
+    let productsListFiltred;
+
+    if (itemId == undefined) {
+        productsListFiltred = productsList;
+    } else {
+        productsListFiltred = productsList.filter((p) => p.id == itemId);
+    }
 
     const loadingProducts = new Promise((resolve, reject) => {
         setTimeout(() => {
-            resolve(productsList);
-        }, 2000);
+            resolve(productsListFiltred);
+        }, 1000);
     });
-
-    // console.log(loadingProducts);
 
     const getItem = async () => {
         try {
@@ -24,7 +32,7 @@ const ItemDetailContainer = () => {
 
     useEffect(() => {
         getItem();
-    }, []);
+    }, [itemId]);
 
     return (
         <div className="flex flex-col justify-center">

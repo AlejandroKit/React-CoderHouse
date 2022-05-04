@@ -2,13 +2,22 @@ import Item from './Item';
 import { productsList } from '../data';
 import { useEffect, useState } from 'react';
 
-const ItemList = () => {
+const ItemList = ({ category }) => {
     const [products, setProducts] = useState([]);
+    let productsListFiltred;
+
+    // console.log(categoryID);
+    if (category == undefined) {
+        productsListFiltred = productsList;
+    } else {
+        productsListFiltred = productsList.filter((p) => p.category == category);
+    }
 
     const loadingProducts = new Promise((resolve, reject) => {
         setTimeout(() => {
-            resolve(productsList);
-        }, 2000);
+            resolve(productsListFiltred);
+            // console.log(productsListFiltred);
+        }, 1000);
     });
 
     const getProducts = async () => {
@@ -22,10 +31,10 @@ const ItemList = () => {
 
     useEffect(() => {
         getProducts();
-    }, []);
+    }, [category]);
 
     return (
-        <div className="flex justify-center">
+        <div className="w-full px-2 flex flex-wrap justify-start">
             {products.length ? (
                 products.map((product) => {
                     return (

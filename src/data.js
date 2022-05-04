@@ -1,6 +1,7 @@
 export const productsList = [
     {
         id: 1,
+        category: 'sneakers',
         name: 'Nike AirJordan 1',
         price: 999,
         imageURL: 'https://static.nike.com/a/images/t_prod_ss/w_960,c_limit,f_auto/953f8c77-48ab-4583-b040-c04a3a93ab32/fecha-de-lanzamiento-de-las-ajko-1-chicago.jpg',
@@ -8,6 +9,7 @@ export const productsList = [
     },
     {
         id: 2,
+        category: 'sneakers',
         name: 'Nike X OffWhite',
         price: 500,
         imageURL: 'https://www.backseries.com/wp-content/uploads/off-white-x-jordan-1-unc-AQ0818_148_A_PREM-800x800.jpg',
@@ -15,6 +17,7 @@ export const productsList = [
     },
     {
         id: 3,
+        category: 'sneakers',
         name: 'Adidas',
         price: 200,
         imageURL: 'https://zapasgo.com/wp-content/uploads/2019/02/127-Adidas-Yeezy-Negras-Ralla-Roja.jpg',
@@ -22,9 +25,42 @@ export const productsList = [
     },
     {
         id: 4,
+        category: 'sneakers',
         name: 'Fila',
         price: 200,
         imageURL: 'https://essential.vteximg.com.br/arquivos/ids/216189-1000-1000/431-0025_1.jpg?v=636840243552100000',
         stock: 15,
-    }
+    },
+    {
+        id: 5,
+        category: 'gorras',
+        name: 'Gorra Nike',
+        price: 600,
+        imageURL: 'https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/ntdkudemnsoblgfhg17p/gorra-aerobill-classic-99-FjPlk8.png',
+        stock: 15,
+    },
+    {
+        id: 6,
+        category: 'gorras',
+        name: 'Gorra Jordan',
+        price: 600,
+        imageURL: 'https://www.digitalsport.com.ar/files/products/5d975c791107f-485127-500x500.jpg',
+        stock: 15,
+    },
+    {
+        id: 7,
+        category: 'buzos',
+        name: 'Buz OffWhite',
+        price: 1000,
+        imageURL: 'https://http2.mlstatic.com/D_763469-MCO44432659233_122020-O.jpg',
+        stock: 15,
+    },
+    {
+        id: 8,
+        category: 'buzos',
+        name: 'Buz Trasher',
+        price: 1500,
+        imageURL: 'http://cdn.shopify.com/s/files/1/0594/7506/7048/products/3404-negro1-3238e3a01e00a4e02e15926028053196-1024-1024.jpg?v=1641583240',
+        stock: 15,
+    },
 ];
