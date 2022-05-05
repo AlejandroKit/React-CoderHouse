@@ -1,3 +1,11 @@
+# Str€€t w€aring
+
+Éste es el simulador de E-Comerce "Str€€t w€aring", proyecto final del curso de React de Coderhouse.
+
+El objetivo del proyecto es simular una plataforma donde se pueda conseguir indumentaria de estilo urabana y street wear que en lo personal me gustan mucho.
+
+A continuación encontraras información básica que se crea por defecto al comenzar con cualquier proyecto que requiera React.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
