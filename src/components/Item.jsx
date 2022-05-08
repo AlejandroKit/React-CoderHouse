@@ -13,7 +13,6 @@ const Item = (props) => {
                     {props.name}
                     <div className="badge badge-secondary">NEW</div>
                 </Link>
-                <ItemCount stock={props.stock} />
                 <div className="card-actions justify-end">
                     <strong>$ {props.price}</strong>
                 </div>

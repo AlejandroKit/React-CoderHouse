@@ -1,11 +1,11 @@
 import { useState } from 'react';
 
-const ItemCount = (props) => {
-    const [count, setCount] = useState(0);
-    var stock = props.stock;
+const ItemCount = ({ func, stock }) => {
+    const [count, setCount] = useState(1);
+    var stock = stock;
 
     const subCount = () => {
-        count <= 0 ? setCount(count) : setCount(count - 1);
+        count <= 1 ? setCount(count) : setCount(count - 1);
     };
 
     const addCount = () => {
@@ -14,12 +14,18 @@ const ItemCount = (props) => {
 
     return (
         <>
-            <div className="flex mt-2">
-                <button onClick={subCount}>-</button>
-                <strong className="grow">{count}</strong>
-                <button onClick={addCount}>+</button>
+            <div className="bg-zinc-100 flex border border-zinc-400 rounded-xl px-5 mb-5 pb-1">
+                <button className="text-3xl" onClick={subCount}>
+                    -
+                </button>
+                <strong className="grow text-3xl">{count}</strong>
+                <button className="text-3xl" onClick={addCount}>
+                    +
+                </button>
             </div>
-            <button className="btn btn-outline btn-sm">BUY</button>
+            <button onClick={func} className="btn btn-outline btn-sm w-full">
+                BUY
+            </button>
         </>
     );
 };
