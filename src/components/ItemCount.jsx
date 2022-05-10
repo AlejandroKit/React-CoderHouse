@@ -14,7 +14,7 @@ const ItemCount = ({ func, stock }) => {
 
     return (
         <>
-            <div className="bg-zinc-100 flex border border-zinc-400 rounded-xl px-5 mb-5 pb-1">
+            <div className="bg-zinc-100 text-gray-700 flex border border-zinc-400 rounded-xl px-5 mb-5 pb-1">
                 <button className="text-3xl" onClick={subCount}>
                     -
                 </button>
@@ -23,7 +23,7 @@ const ItemCount = ({ func, stock }) => {
                     +
                 </button>
             </div>
-            <button onClick={func} className="btn btn-outline btn-sm w-full">
+            <button onClick={() => func(count)} className="btn btn-outline btn-sm w-full">
                 BUY
             </button>
         </>
