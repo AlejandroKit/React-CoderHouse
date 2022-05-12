@@ -38,7 +38,7 @@ const ItemDetailContainer = () => {
         <div className="flex flex-col justify-center">
             {items.map((s) => (
                 <div key={s.id} className="flex m-10 mt-10">
-                    <ItemDetail name={s.name} price={s.price} imageURL={s.imageURL} stock={s.stock} />
+                    <ItemDetail id={s.id} name={s.name} price={s.price} imageURL={s.imageURL} stock={s.stock} />
                 </div>
             ))}
         </div>

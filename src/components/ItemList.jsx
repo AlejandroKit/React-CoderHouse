@@ -6,7 +6,6 @@ const ItemList = ({ category }) => {
     const [products, setProducts] = useState([]);
     let productsListFiltred;
 
-    // console.log(categoryID);
     if (category == undefined) {
         productsListFiltred = productsList;
     } else {
@@ -16,7 +15,6 @@ const ItemList = ({ category }) => {
     const loadingProducts = new Promise((resolve, reject) => {
         setTimeout(() => {
             resolve(productsListFiltred);
-            // console.log(productsListFiltred);
         }, 1000);
     });
 
@@ -25,7 +23,7 @@ const ItemList = ({ category }) => {
             const result = await loadingProducts;
             setProducts(result);
         } catch (err) {
-            console.log(err);
+            // console.log(err);
         }
     };
 

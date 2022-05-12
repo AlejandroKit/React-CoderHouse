@@ -18,7 +18,7 @@ const ItemCount = ({ func, stock }) => {
                 <button className="text-3xl" onClick={subCount}>
                     -
                 </button>
-                <strong className="grow text-3xl">{count}</strong>
+                <strong className="grow text-3xl text-center">{count}</strong>
                 <button className="text-3xl" onClick={addCount}>
                     +
                 </button>

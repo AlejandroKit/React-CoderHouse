@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom';
-import ItemCount from './ItemCount';
 import './style/card.css';
 
 const Item = (props) => {
