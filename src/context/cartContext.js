@@ -6,12 +6,27 @@ export const CartContext = createContext({});
 export const CartProvider = ({ children }) => {
     const [cartList, setCartList] = useState([]);
 
-    const addToCartList = (prodId, count) => {
-        setCartList((cartList) => {
-            const product = productsList.find((e) => e.id == prodId);
-            product.quantity = count;
-            return cartList.concat(product);
+    const isInCart = (id) => {
+        let res = [];
+        cartList.forEach((e) => {
+            if (e.id == id) {
+                res = [1];
+            }
         });
+        return res.length;
+    };
+
+    const addToCartList = (prodId, count) => {
+        if (isInCart(prodId)) {
+            const product = productsList.find((e) => e.id == prodId);
+            product.quantity = product.quantity + count;
+        } else {
+            setCartList((cartList) => {
+                const product = productsList.find((e) => e.id == prodId);
+                product.quantity = count;
+                return cartList.concat(product);
+            });
+        }
     };
 
     const context = {
