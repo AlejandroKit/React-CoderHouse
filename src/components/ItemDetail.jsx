@@ -36,7 +36,7 @@ const ItemDetail = (props) => {
                             </div>
                         </div>
                         <Link to={'/cart'} className="text-left btn btn-outline btn-success">
-                            Ver el carrito
+                            Terminar mi compra
                         </Link>
                     </div>
                 ) : (
