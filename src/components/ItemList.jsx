@@ -1,35 +1,8 @@
 import Item from './Item';
-import { productsList } from '../data';
-import { useEffect, useState } from 'react';
 
-const ItemList = ({ category }) => {
-    const [products, setProducts] = useState([]);
-    let productsListFiltred;
-
-    if (category == undefined) {
-        productsListFiltred = productsList;
-    } else {
-        productsListFiltred = productsList.filter((p) => p.category == category);
-    }
-
-    const loadingProducts = new Promise((resolve, reject) => {
-        setTimeout(() => {
-            resolve(productsListFiltred);
-        }, 1000);
-    });
-
-    const getProducts = async () => {
-        try {
-            const result = await loadingProducts;
-            setProducts(result);
-        } catch (err) {
-            // console.log(err);
-        }
-    };
-
-    useEffect(() => {
-        getProducts();
-    }, [category]);
+const ItemList = ({ productsList }) => {
+    const products = productsList;
+    console.log(products);
 
     return (
         <div className="w-full px-2 flex flex-wrap justify-start">
@@ -37,7 +10,7 @@ const ItemList = ({ category }) => {
                 products.map((product) => {
                     return (
                         <div key={product.id}>
-                            <Item id={product.id} name={product.name} price={product.price} imageURL={product.imageURL} stock={product.stock} />
+                            <Item fireId={product.fireId} id={product.id} name={product.name} price={product.price} imageURL={product.imageURL} />
                         </div>
                     );
                 })

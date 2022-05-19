@@ -7,12 +7,10 @@ const CartWidget = () => {
 
     useEffect(() => {
         setTotal(totalProd());
-        console.log(cartList);
     }, [empty]);
 
     useEffect(() => {
         setTotal(totalProd());
-        console.log(cartList);
     }, [cartList]);
 
     return (
