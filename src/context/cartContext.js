@@ -5,7 +5,11 @@ export const CartContext = createContext({});
 
 export const CartProvider = ({ children }) => {
     const [cartList, setCartList] = useState([]);
-    const [empty, setEmpty] = useState(true);
+
+    let totalPrecio = 0;
+    cartList.forEach((e) => {
+        totalPrecio = totalPrecio + parseInt(e.price) * parseInt(e.quantity);
+    });
 
     const isInCart = (id) => {
         let res = [];
@@ -25,11 +29,19 @@ export const CartProvider = ({ children }) => {
             setCartList((cartList) => {
                 const product = productsList.find((e) => e.id == prodId);
                 product.quantity = count;
-                product.index = cartList.length;
                 return cartList.concat(product);
             });
         }
-        setEmpty(false);
+    };
+
+    const removeFromCart = (id) => {
+        const cartListCopy = [...cartList];
+        for (let i = 0; i < cartListCopy.length; i++) {
+            if (cartListCopy[i].id == id) {
+                cartListCopy.splice(i, 1);
+            }
+        }
+        setCartList(cartListCopy);
     };
 
     const totalProd = () => {
@@ -40,16 +52,12 @@ export const CartProvider = ({ children }) => {
         return total;
     };
 
-    const makeEmpty = () => {
-        setEmpty(!empty);
-    };
-
     const context = {
         cartList,
-        empty,
+        totalPrecio,
         addToCartList,
+        removeFromCart,
         totalProd,
-        makeEmpty,
     };
 
     return <CartContext.Provider value={context}>{children}</CartContext.Provider>;

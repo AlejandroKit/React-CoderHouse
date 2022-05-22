@@ -1,8 +1,8 @@
+import { Link } from 'react-router-dom';
 import Item from './Item';
 
 const ItemList = ({ productsList }) => {
     const products = productsList;
-    console.log(products);
 
     return (
         <div className="w-full px-2 flex flex-wrap justify-start">
@@ -10,7 +10,9 @@ const ItemList = ({ productsList }) => {
                 products.map((product) => {
                     return (
                         <div key={product.id}>
-                            <Item fireId={product.fireId} id={product.id} name={product.name} price={product.price} imageURL={product.imageURL} />
+                            <Link to={`/item/${product.fireId}`} className="card-title">
+                                <Item id={product.id} name={product.name} price={product.price} imageURL={product.imageURL} />
+                            </Link>
                         </div>
                     );
                 })

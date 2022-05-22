@@ -1,4 +1,4 @@
-const CartCard = ({ index, name, price, imageURL, quantity, func }) => {
+const CartCard = ({ id, name, price, imageURL, quantity, func }) => {
     return (
         <div className="flex">
             <div className="h-40 w-40">
@@ -12,7 +12,7 @@ const CartCard = ({ index, name, price, imageURL, quantity, func }) => {
             <button
                 className="btn btn-error btn-outline self-center"
                 onClick={() => {
-                    func(index);
+                    func(id);
                 }}
             >
                 Eliminar
