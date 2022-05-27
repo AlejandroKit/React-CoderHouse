@@ -1,0 +1,21 @@
+.itemDetailContainer {
+    img {
+        border-radius: 1em;
+    }
+
+    .detail__description {
+        background-color: #000d;
+        padding: .5em;
+        border-radius: 1em;
+
+        h2 {
+            color: #eee;
+            font-family: 'Smooch', cursive;
+            text-shadow: 2px 2px 1px #000;
+        }
+
+        p {
+            color: #f70;
+        }
+    }
+}

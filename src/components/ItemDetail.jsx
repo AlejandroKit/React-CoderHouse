@@ -3,30 +3,28 @@ import { Link } from 'react-router-dom';
 import { CartContext } from '../context/cartContext';
 import ItemCount from './ItemCount';
 
-const ItemDetail = (props) => {
+const ItemDetail = ({ id, name, price, imageURL, stock }) => {
+    const { addToCartList } = useContext(CartContext);
     const [isInCart, setIsInCart] = useState(false);
     const [count, setCount] = useState(1);
 
     const onAdd = (count) => {
         setIsInCart(true);
         setCount(count);
-        addToCartList(props.id, count);
+        addToCartList(id, count);
     };
 
-    const { addToCartList } = useContext(CartContext);
-
     return (
-        <>
+        <div key={id} className="itemDetailContainer flex m-10">
             <div className="w-full">
-                <img className="h-full object-cover" src={props.imageURL} alt="" />
+                <img className="h-full object-cover" src={imageURL} alt="" />
             </div>
-            <div className="ml-20 flex flex-col">
-                <h2 className="text-7xl text-left">{props.name}</h2>
+            <div className="detail__description ml-10 flex flex-col">
+                <h2 className="text-8xl text-left">{name}</h2>
                 <p className="my-10 text-2xl text-left grow">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae cum, inventore accusantium ut aperiam quo fugiat ratione maxime quod quas expedita obcaecati asperiores. Numquam blanditiis facilis rem repellat, iusto incidunt.</p>
 
                 {isInCart ? (
                     <div className="grow w-2/4 flex flex-col text-left">
-                        {/* <span className="text-xl">Agregaste items al carrito</span> */}
                         <div className="alert alert-success shadow-lg mb-5">
                             <div>
                                 <svg xmlns="http://www.w3.org/2000/svg" className="stroke-current flex-shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24">
@@ -41,13 +39,13 @@ const ItemDetail = (props) => {
                     </div>
                 ) : (
                     <div className="grow w-2/4">
-                        <ItemCount func={onAdd} stock={props.stock} />
+                        <ItemCount func={onAdd} stock={stock} />
                     </div>
                 )}
 
-                <strong className="text-right text-3xl text-lime-500">Price: ${props.price}</strong>
+                <strong className="text-right text-3xl text-lime-500">Price: ${price}</strong>
             </div>
-        </>
+        </div>
     );
 };
 export default ItemDetail;

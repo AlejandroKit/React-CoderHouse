@@ -23,7 +23,7 @@ const ItemCount = ({ func, stock }) => {
                     +
                 </button>
             </div>
-            <button onClick={() => func(count)} className="btn btn-outline btn-sm w-full">
+            <button onClick={() => func(count)} className="btn btn-outline btn-info btn-sm w-full">
                 BUY
             </button>
         </>

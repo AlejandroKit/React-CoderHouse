@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import ItemList from './ItemList';
-import { collection, getDoc, getDocs, getFirestore } from 'firebase/firestore';
+import { collection, getDocs, getFirestore } from 'firebase/firestore';
 
 const ItemListContainer = () => {
     const { categoryId } = useParams();
@@ -39,7 +39,7 @@ const ItemListContainer = () => {
     }, [categoryId]);
 
     return (
-        <div className="w-full">
+        <div className="w-full min-h-screen">
             <ItemList productsList={products} />
         </div>
     );

@@ -22,10 +22,8 @@ const ItemDetailContainer = () => {
     }, [itemId]);
 
     return (
-        <div className="flex flex-col justify-center">
-            <div key={item.id} className="flex m-10 mt-10">
-                <ItemDetail id={item.id} name={item.name} price={item.price} imageURL={item.imageURL} stock={item.stock} />
-            </div>
+        <div className="flex flex-col justify-start">
+            <ItemDetail id={item.id} name={item.name} price={item.price} imageURL={item.imageURL} stock={item.stock} />
         </div>
     );
 };

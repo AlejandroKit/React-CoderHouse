@@ -1,0 +1,47 @@
+.navbar {
+    background-color: #16a;
+    border-radius: .5em;
+    margin-bottom: 2em;
+    // box-shadow: .5em .5em 1px #136;
+    box-shadow: .5em .5em 1px #f70;
+    flex-wrap: wrap;
+
+    .navbar__title {
+        font-family: 'Smooch', cursive;
+        font-weight: 100;
+        text-shadow: 2px 2px 1px #000;
+    }
+
+    .nav {
+        flex-wrap: wrap;
+    }
+
+    li {
+        text-shadow: 1px 1px 1px #000;
+    }
+
+    .indicator {
+        height: 100%;
+        width: 100%;
+
+        a {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            svg {
+                height: 80%;
+                width: 80%;
+            }
+
+            span {
+                color: #eee;
+                right: 15px;
+                top: 5px;
+            }
+        }
+    }
+}

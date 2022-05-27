@@ -1,0 +1,102 @@
+body {
+  background-image: url("../images/phonk_background_2.jpg");
+  width: 100%;
+  min-height: 100vh;
+  padding: 1em 1em;
+}
+
+.navbar {
+  background-color: #16a;
+  border-radius: .5em;
+  margin-bottom: 2em;
+  box-shadow: .5em .5em 1px #f70;
+  flex-wrap: wrap;
+}
+
+.navbar .navbar__title {
+  font-family: 'Smooch', cursive;
+  font-weight: 100;
+  text-shadow: 2px 2px 1px #000;
+}
+
+.navbar .nav {
+  flex-wrap: wrap;
+}
+
+.navbar li {
+  text-shadow: 1px 1px 1px #000;
+}
+
+.navbar .indicator {
+  height: 100%;
+  width: 100%;
+}
+
+.navbar .indicator a {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar .indicator a svg {
+  height: 80%;
+  width: 80%;
+}
+
+.navbar .indicator a span {
+  color: #eee;
+  right: 15px;
+  top: 5px;
+}
+
+.card-body {
+  background-color: #14a;
+}
+
+.card-body span {
+  text-shadow: 1px 1px 2px #000;
+}
+
+.card-body .badge {
+  background-color: #f20;
+  color: #000;
+  box-shadow: 3px 3px 1px #c10;
+  border: none;
+}
+
+.card-body strong {
+  color: #fa0;
+}
+
+.itemDetailContainer img {
+  border-radius: 1em;
+}
+
+.itemDetailContainer .detail__description {
+  background-color: #000d;
+  padding: .5em;
+  border-radius: 1em;
+}
+
+.itemDetailContainer .detail__description h2 {
+  color: #eee;
+  font-family: 'Smooch', cursive;
+  text-shadow: 2px 2px 1px #000;
+}
+
+.itemDetailContainer .detail__description p {
+  color: #f70;
+}
+
+.cartContainer .cartList {
+  background-color: #111e;
+  border-radius: 1em;
+}
+
+.cartContainer strong {
+  color: #091;
+}
+/*# sourceMappingURL=style.css.map */

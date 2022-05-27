@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 
 const LinkList = () => {
     return (
-        <ul className="menu menu-horizontal p-0 z-10">
+        <ul className="menu menu-horizontal p-0 z-10 text-xl">
             <li>
                 <Link to={'/'}>Inicio</Link>
             </li>

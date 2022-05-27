@@ -1,0 +1,11 @@
+body {
+    background-image: url("../images/phonk_background_2.jpg");
+    width: 100%;
+    min-height: 100vh;
+    padding: 1em 1em;
+}
+
+@import "./navbar";
+@import "./itemCard";
+@import "./itemDetail";
+@import "./cart";

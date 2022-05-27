@@ -4,14 +4,13 @@ import LinkList from './LinkList';
 
 const NavBar = () => {
     return (
-        <div className="navbar bg-base-100">
+        <div className="navbar bg-base-100 text-amber-500">
             <div className="flex-1">
-                {/* <a className="btn btn-ghost normal-case text-xl">Str€€t-W€aring</a> */}
-                <Link to={'/'} className="btn btn-ghost normal-case text-xl">
+                <Link to={'/'} className="navbar__title btn btn-ghost normal-case text-4xl">
                     Str€€t-W€aring
                 </Link>
             </div>
-            <div className="flex-none">
+            <div className="nav">
                 <LinkList />
                 <CartWidget />
                 <div className="dropdown dropdown-end dropdown-hover">
@@ -20,7 +19,7 @@ const NavBar = () => {
                             <img src="https://api.lorem.space/image/face?hash=33791" />
                         </div>
                     </label>
-                    <ul className="mt-3 p-2 shadow menu menu-compact dropdown-content bg-base-100 rounded-box w-52">
+                    <ul className=" p-2 shadow menu menu-compact dropdown-content bg-amber-600 rounded-box w-52">
                         <li>
                             <a className="justify-between">
                                 Profile
