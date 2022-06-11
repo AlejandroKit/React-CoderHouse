@@ -1,6 +1,6 @@
 const Item = ({ name, price, imageURL }) => {
     return (
-        <div className="card w-72 bg-base-100 shadow-xl mx-4 mb-5">
+        <div className="card w-72 bg-base-100 shadow-xl">
             <div className="h-52 flex justify-center">
                 <img className="object-cover object-center" src={imageURL} alt="Shoes" />
             </div>

@@ -1,0 +1,70 @@
+.modal-box {
+    background-color: #000000f5;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+
+    h3 {
+        color: #fff;
+    }
+
+    .signIn__form {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+
+        .inpContainer {
+            font-size: 1.5em;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            flex-grow: 1;
+
+            span {
+                color: #18f;
+            }
+
+            input {
+                background-color: #16a;
+                color: #eee;
+                padding: 0 .5em;
+                transition: .1s;
+
+                &::placeholder {
+                    color: #bbb;
+                }
+            }
+
+            input:focus {
+                outline: none;
+                border-bottom: 2px solid #fa0;
+                transition: .1s;
+            }
+
+            .errMessage {
+                color: #f00;
+                font-size: .6em;
+                margin-top: 5px;
+            }
+        }
+
+        .checkboxInp {
+            margin-right: 5px;
+        }
+
+        .terminosErrMessage {
+            display: block;
+            color: #f00;
+        }
+
+        .checkboxInp:checked+span {
+            color: #fa0;
+        }
+
+        .btn {
+            background-color: #fa0;
+            color: #eee;
+        }
+    }
+}

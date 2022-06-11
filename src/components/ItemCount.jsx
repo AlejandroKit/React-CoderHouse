@@ -2,7 +2,6 @@ import { useState } from 'react';
 
 const ItemCount = ({ func, stock }) => {
     const [count, setCount] = useState(1);
-    var stock = stock;
 
     const subCount = () => {
         count <= 1 ? setCount(count) : setCount(count - 1);

@@ -7,7 +7,7 @@ const ItemList = ({ productsList }) => {
             {productsList.length ? (
                 productsList.map((product) => {
                     return (
-                        <div key={product.id}>
+                        <div className="mx-4 mb-5" key={product.id}>
                             <Link to={`/item/${product.fireId}`} className="card-title">
                                 <Item name={product.name} price={product.price} imageURL={product.imageURL} />
                             </Link>

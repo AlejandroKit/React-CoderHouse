@@ -52,6 +52,13 @@ body {
   top: 5px;
 }
 
+.card {
+  background-color: transparent;
+  border: 5px solid transparent;
+  outline: 2px solid #fa0;
+  box-shadow: 0 0 10px 3px #fa0;
+}
+
 .card-body {
   background-color: #14a;
 }
@@ -98,5 +105,76 @@ body {
 
 .cartContainer strong {
   color: #091;
+}
+
+.modal-box {
+  background-color: #000000f5;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-box h3 {
+  color: #fff;
+}
+
+.modal-box .signIn__form {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.modal-box .signIn__form .inpContainer {
+  font-size: 1.5em;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  flex-grow: 1;
+}
+
+.modal-box .signIn__form .inpContainer span {
+  color: #18f;
+}
+
+.modal-box .signIn__form .inpContainer input {
+  background-color: #16a;
+  color: #eee;
+  padding: 0 .5em;
+  transition: .1s;
+}
+
+.modal-box .signIn__form .inpContainer input::placeholder {
+  color: #bbb;
+}
+
+.modal-box .signIn__form .inpContainer input:focus {
+  outline: none;
+  border-bottom: 2px solid #fa0;
+  transition: .1s;
+}
+
+.modal-box .signIn__form .inpContainer .errMessage {
+  color: #f00;
+  font-size: .6em;
+  margin-top: 5px;
+}
+
+.modal-box .signIn__form .checkboxInp {
+  margin-right: 5px;
+}
+
+.modal-box .signIn__form .terminosErrMessage {
+  display: block;
+  color: #f00;
+}
+
+.modal-box .signIn__form .checkboxInp:checked + span {
+  color: #fa0;
+}
+
+.modal-box .signIn__form .btn {
+  background-color: #fa0;
+  color: #eee;
 }
 /*# sourceMappingURL=style.css.map */

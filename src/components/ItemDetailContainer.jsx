@@ -23,7 +23,7 @@ const ItemDetailContainer = () => {
 
     return (
         <div className="flex flex-col justify-start">
-            <ItemDetail id={item.id} name={item.name} price={item.price} imageURL={item.imageURL} stock={item.stock} />
+            <ItemDetail id={item.fireId} name={item.name} price={item.price} imageURL={item.imageURL} stock={item.stock} />
         </div>
     );
 };
