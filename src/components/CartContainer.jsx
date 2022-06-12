@@ -7,12 +7,7 @@ import SignIn from './SignIn';
 import ConfirmPurchaseModal from './ConfirmPurchaseModal';
 
 const CartContainer = () => {
-    const { cartList, idCompra, isLoged, totalPrecio, removeFromCart, setOrder } = useContext(CartContext);
-    console.log(cartList);
-
-    useEffect(() => {
-        setOrder();
-    }, [isLoged]);
+    const { cartList, idCompra, isLoged, totalPrecio, removeFromCart } = useContext(CartContext);
 
     return (
         <div className="cartContainer w-full flex flex-col flex-wrap content-center">
@@ -38,7 +33,7 @@ const CartContainer = () => {
                     Terminar Compra
                 </label>
                 <input type="checkbox" id="my-modal-3" className="modal-toggle" />
-                {isLoged === 'true' ? <ConfirmPurchaseModal idCompra={idCompra} /> : <SignIn />}
+                {isLoged === true ? <ConfirmPurchaseModal idCompra={idCompra} /> : <SignIn />}
             </div>
         </div>
     );

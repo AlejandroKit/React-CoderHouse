@@ -8,7 +8,7 @@ export const CartProvider = ({ children }) => {
     const [cartList, setCartList] = useState([]);
     const [userData, setUserData] = useState([]);
     const [idCompra, setIdCompra] = useState('');
-    const [isLoged, setIsLoged] = useState('false');
+    const [isLoged, setIsLoged] = useState(false);
 
     let totalPrecio = 0;
     cartList.forEach((e) => {
@@ -58,7 +58,7 @@ export const CartProvider = ({ children }) => {
     };
 
     const setOrder = async () => {
-        if (isLoged === 'true') {
+        if (isLoged === true) {
             const itemsWithoutImg = cartList.map((e) => ({ id: e.id, title: e.name, quantity: e.quantity }));
             const compra = {
                 buyer: userData,
@@ -75,6 +75,7 @@ export const CartProvider = ({ children }) => {
             });
             setIdCompra(`${response.id}`);
             setCartList([]);
+            setTotal(0);
         }
     };
 

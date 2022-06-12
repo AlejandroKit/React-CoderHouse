@@ -4,7 +4,22 @@
 
 El objetivo del proyecto es simular una plataforma donde se pueda conseguir indumentaria de estilo urabana y street wear que en lo personal me gustan mucho.
 
-A continuación encontraras información básica que se crea por defecto al comenzar con cualquier proyecto que requiera React.
+##¿Cómo puedo navegar por la app?
+
+Al entrar en la app podras ver un catálogo con todos los productos en stock junto a una barra de navegación que puede filtrar el caatálogo por categorías. Tambien encontraras un ícono con forma de carrito que, además de mostrar cuantos objetos tienes reservados para comprar, al clickear te llevará a tu carrito para continuar con la compra de tus productos.
+
+Ahora, puedes seleccionar cualquiera de los productos del catalogo para verlos mas a detalle clickeando en cualquier parte de la tarjeta del item que más te guste. Esto te llevará a la pagina de detalle del producto donde podras encontrar el nombre del producto, una descripción, un contador para que indiques el monto que quieres llevar y el precio. Una vez hayas indicado cuantos ejemplares quieres puedes agregar tu compra al carrito con el boton _"BUY"_. Luego de un mensaje confirmando que se agregó tu item correctamente puedes seguir navegando para agregar otros items a tu compra o ir directo al carrito para proceder a la compra final.
+
+En la pagina del carrito encontraras un mensaje chistoso si aún no has agregado nada a éste o una lista con los productos que hayas seleccionado con los datos del producto y la cantidad que elegiste llevar. Debajo de la lista encontraras el monto total por pagar, un botón para volver al catalogo y otro para finalizar la compra.
+Cuando seleccione _"Terminar Compra"_ aparecerá un formulario en donde debe agregar sus datos personales, terminado el formulario se procesará la compra, se vaciará el carrito y en un modal se le brindará el codigo único de su compra.
+
+##Llevandolo a la practica
+
+Este simulador cuenta con las funciones y experiencias básicas de un e-commerce. Faltan pulir unos detalles que conllevan complejizar la lógica ya implementada como la capacidad de iniciar sesión en cualquier momento, un metodo para poder pagar de verdad, una lista separada del carrito con los productos favoritos, que cuando se realice una comrpa se actualicé el stock, etc.
+
+---
+
+**A continuación encontraras información básica que se crea por defecto al comenzar con cualquier proyecto que requiera React.**
 
 # Getting Started with Create React App
 

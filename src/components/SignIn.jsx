@@ -3,7 +3,7 @@ import { CartContext } from '../context/cartContext';
 import { useForm } from 'react-hook-form';
 
 const SignIn = () => {
-    const { setUserData, setIsLoged } = useContext(CartContext);
+    const { setUserData, setIsLoged, setOrder } = useContext(CartContext);
     const {
         register,
         handleSubmit,
@@ -21,7 +21,7 @@ const SignIn = () => {
                     className="signIn__form"
                     onSubmit={handleSubmit((data) => {
                         setUserData(data);
-                        setIsLoged('true');
+                        setIsLoged(true);
                     })}
                 >
                     <div className="inpContainer">
