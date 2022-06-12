@@ -3,7 +3,7 @@ import { CartContext } from '../context/cartContext';
 import { useForm } from 'react-hook-form';
 
 const SignIn = () => {
-    const { setUserData, setIsLoged, setOrder } = useContext(CartContext);
+    const { setUserData, setIsLoged } = useContext(CartContext);
     const {
         register,
         handleSubmit,
